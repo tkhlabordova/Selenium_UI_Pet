@@ -2,14 +2,14 @@ import time
 import pytest
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from conftest import go_to_login
+# from conftest import go_to_login
 from pages.locators import ProfilePageLocators
 from pages.profile_page import ProfilePage
 from pages.variables import ProfilePageConstants
 
 
 def test_go_to_add_pet(browser):
-    go_to_login(browser)
+    # go_to_login(browser)
     link = ProfilePageConstants.PROFILE_PAGE_URL
     page = ProfilePage(browser, link)
     page.open()
@@ -20,7 +20,7 @@ def test_go_to_add_pet(browser):
 
 @pytest.mark.edit_pet
 def test_go_to_edit_pet(browser):
-    go_to_login(browser)
+    # go_to_login(browser)
     link = ProfilePageConstants.PROFILE_PAGE_URL
     page = ProfilePage(browser, link)
     page.open()
@@ -31,7 +31,7 @@ def test_go_to_edit_pet(browser):
 
 @pytest.mark.edit_pet
 def test_edit_pet(browser):
-    go_to_login(browser)
+    # go_to_login(browser)
     link = ProfilePageConstants.PROFILE_PAGE_URL
     page = ProfilePage(browser, link)
     page.open()
@@ -44,7 +44,7 @@ def test_edit_pet(browser):
 
 
 def test_delete_pet(browser):
-    go_to_login(browser)
+    # go_to_login(browser)
     link = ProfilePageConstants.PROFILE_PAGE_URL
     page = ProfilePage(browser, link)
     page.open()

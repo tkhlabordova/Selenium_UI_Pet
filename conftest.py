@@ -7,6 +7,7 @@ from pages.variables import LoginPageConstants
 @pytest.fixture(autouse=True)
 def browser():
     browser = webdriver.Chrome()
+    go_to_login(browser)
     yield browser
     browser.quit()
 
